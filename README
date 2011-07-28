@@ -1,0 +1,19 @@
+#################
+### SimVizMap ###
+#################
+
+Spatial visualization from simulation results
+
+This package contains code to create visualizations from econometric
+simulations as suggested in Arribas-Bel, Koschinsky and Amaral (2011)
+
+Authors
+=======
+Dani Arribas-Bel <daniel.arribas.bel@gmail.com>
+Julia Koschinsky <julia.koschinsky@asu.edu>
+Pedro V. Amaral <pvmda2@cam.ac.uk>
+
+References
+==========
+Arribas-Bel, D., Koschinsky, J., Amaral, P. V. (2011) "Improving the Multi-Dimensional Comparison of Simulation Results: A Spatial Visualization Approach"
+
