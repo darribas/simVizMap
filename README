@@ -17,3 +17,9 @@ References
 ==========
 Arribas-Bel, D., Koschinsky, J., Amaral, P. V. (2011) "Improving the Multi-Dimensional Comparison of Simulation Results: A Spatial Visualization Approach"
 
+Dependencies
+============
+To use this package, you will need to have installed the following libraries:
+    * Numpy
+    * Scipy
+    * Matplotlib
