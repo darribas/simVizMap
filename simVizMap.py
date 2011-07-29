@@ -1,3 +1,22 @@
+##################################################################
+# simVizMap: spatial spatial visualization of simulation results #
+##################################################################
+
+# Author: Dani Arribas-Bel <daniel.arribas.bel@gmail.com>
+
+# Copyright 2011 by Daniel Arribas-Bel 
+#    This program is free software: you can redistribute it and/or modify
+#    it under the terms of the GNU General Public License as published by
+#    the Free Software Foundation, either version 3 of the License, or
+#    (at your option) any later version.
+
+#    This program is distributed in the hope that it will be useful,
+#    but WITHOUT ANY WARRANTY; without even the implied warranty of
+#    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#    GNU General Public License for more details.
+
+#    See: <http://creativecommons.org/licenses/GPL/2.0/> or <http://www.gnu.org/licenses/>
+
 import pylab as pl
 import numpy as np
 import scipy
@@ -10,12 +29,30 @@ class SimVizMap:
 
     Parameters
     ----------
+    csv_link            : string
+                          Path to the csv input file
+    cmap                : string
+                          Color scheme to be used (default='Blues')
+    cb_orientation      : string
+                          Orientation of the colorbar: 'horizontal' (default),
+                          'vertical' or None. If None, no colobar is added
 
     Attributes
     ----------
 
+    x                   : array
+                          Numpy array for the values to be converted into a
+                          map
+    p                   : matplotlib.axes.AxesSubplot
+                          Graphical object containing the map
+
     Methods
     -------
+
+    show                : Displays in a Matplotlibt window the map
+    save                : Dumps the graphical object into a png file. It
+                          requires the path of the output picture to be passed
+                          as an argument
 
     References
     ----------
@@ -147,13 +184,23 @@ def set_h_tags(y, tags, subplot, fontsize=15, rotation=0, weight=None,
 
     Arguments
     ---------
-    y           : float
-                  Horizontal axis along which tags will be plotted
-    tags        : list
-                  List of strings to be plotted
-    subplot     : subplot
-                  Pylab subplot object
-    ...         : other text parameters
+    y                       : float
+                              Horizontal axis along which tags will be plotted
+    tags                    : list
+                              List of strings to be plotted
+    subplot                 : subplot
+                              Pylab subplot object
+    fontsize                : int
+                              Size of the font used for the tags (default=15)
+    rotation                : int
+                              Degrees for the labels to be rotated (default=0)
+    weight                  : string
+                              Modifications for the text like bold, italic...
+                              (default=None)
+    verticalalignment       : string
+                              Either 'center' (default), 'left' or 'right'.
+    horizontalalignment     : string
+                              Either 'center' (default), 'left' or 'right'.
     '''
     n = len(tags)
     sep = 1. / (2*n)
@@ -173,13 +220,23 @@ def set_v_tags(x, tags, subplot, fontsize=15, rotation=0, weight=None,
 
     Arguments
     ---------
-    y           : float
-                  Vertical axis along which tags will be plotted
-    tags        : list
-                  List of strings to be plotted
-    subplot     : subplot
-                  Pylab subplot object
-    ...         : other text parameters
+    y                       : float
+                              Vertical axis along which tags will be plotted
+    tags                    : list
+                              List of strings to be plotted
+    subplot                 : subplot
+                              Pylab subplot object
+    fontsize                : int
+                              Size of the font used for the tags (default=15)
+    rotation                : int
+                              Degrees for the labels to be rotated (default=0)
+    weight                  : string
+                              Modifications for the text like bold, italic...
+                              (default=None)
+    verticalalignment       : string
+                              Either 'center' (default), 'left' or 'right'.
+    horizontalalignment     : string
+                              Either 'center' (default), 'left' or 'right'.
     '''
     n = len(tags)
     sep = 1. / (2*n)
@@ -190,10 +247,4 @@ def set_v_tags(x, tags, subplot, fontsize=15, rotation=0, weight=None,
                 verticalalignment=verticalalignment,
                 horizontalalignment=horizontalalignment)
     return 'ph'
-
-if __name__ == '__main__':
-    link = 'rejRate_anselinRey.csv'
-    p = SimVizMap(link, cb_orientation=None)
-    #p.save('/Users/dani/Desktop/test.png')
-    p.show()
 

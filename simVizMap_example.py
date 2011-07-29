@@ -2,7 +2,7 @@
 from simVizMap import SimVizMap, set_h_tags, set_v_tags
 
 # Set link to csv file
-csv_link = 'rejRate_anselinRey.csv'
+csv_link = 'simVizMap_example.csv'
 
 # Create graphical object for the map
 plot_object = SimVizMap(csv_link, cb_orientation='vertical')
