@@ -7,6 +7,9 @@ Spatial visualization from simulation results
 This package contains code to create visualizations from econometric
 simulations as suggested in Arribas-Bel, Koschinsky and Amaral (2011)
 
+A little tutorial explaining how to use the package to create simulation 
+maps is included as a pdf
+
 Authors
 =======
 Dani Arribas-Bel <daniel.arribas.bel@gmail.com>
@@ -15,7 +18,8 @@ Pedro V. Amaral <pvmda2@cam.ac.uk>
 
 References
 ==========
-Arribas-Bel, D., Koschinsky, J., Amaral, P. V. (2011) "Improving the Multi-Dimensional Comparison of Simulation Results: A Spatial Visualization Approach"
+Arribas-Bel, D., Koschinsky, J., Amaral, P. V. (2011) 
+"Improving the Multi-Dimensional Comparison of Simulation Results: A Spatial Visualization Approach". Letters in Spatial and Resource Sciences.
 
 Dependencies
 ============
